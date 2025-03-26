@@ -7,9 +7,9 @@
         :type="'link'"
         :text="'Tạo bài đăng'"
         :icon="'fas fa-plus'"
-        :href="route('posts.create')" />
+        :href="route('posts.createv2')" />
     @php
-    $headers = ['Mã bài đăng', 'Ảnh', 'Tiêu đề', 'Diện tích MB', 'Diện tích SD', 'Số tầng', 'Phòng ngủ', 'Phòng toilet', 'Giá', 'Địa chỉ', 'Hướng', 'Hướng phong thủy', 'Thao tác'];
+    $headers = ['Mã bài đăng', 'Ảnh', 'Tiêu đề', 'Diện tích MB', 'Diện tích SD', 'Số tầng', 'Phòng ngủ', 'Phòng toilet', 'Giá', 'Địa chỉ', 'Hướng', 'Hướng phong thủy','Thời gian đăng', 'Thao tác'];
     $rows = $posts->map(function($post) {
     $images = is_string($post->images) ? json_decode($post->images, true) : $post->images;
     $imageHtml = '';
