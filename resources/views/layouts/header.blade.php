@@ -1,11 +1,8 @@
 <header class="bg-white shadow-md p-4">
     <div class="flex items-center justify-between max-w-screen-xl mx-auto">
-        <!-- Logo -->
         <div class="flex items-center space-x-2">
             <img src="https://www.muaban.net/assets/img/logo.svg" alt="" class="w-20">
         </div>
-
-        <!-- Search Bar -->
         <div class="flex-1 mx-4 relative">
             <input type="text" placeholder="Xin chào, hôm nay bạn cần tìm gì?"
                 class="w-full p-2 pl-12 pr-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500" />
@@ -16,14 +13,12 @@
                     d="M11.742 10.342a6.5 6.5 0 1 0-1.398 1.398l3.5 3.5a1 1 0 0 0 1.415-1.415l-3.5-3.5zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
             </svg>
         </div>
-
-        <!-- Account & Login Buttons -->
         <div class="flex items-center space-x-6">
             <button
-                class="text-sm text-orange-600 bg-white px-4 py-2 rounded-lg border border-orange-500 hover:bg-orange-50">Đăng
-                tin</button>
+                class="text-sm text-orange-600 bg-white px-4 py-2 rounded-lg border border-orange-500 hover:bg-orange-50"><a href="{{route('posts.index')}}">Đăng tin</a></button>
             <button class="text-sm text-gray-600 hover:text-orange-600">Đăng nhập</button>
             <button class="text-sm text-gray-600 hover:text-orange-600">Cá nhân</button>
+            
         </div>
     </div>
 </header>
