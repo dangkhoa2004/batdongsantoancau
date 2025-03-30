@@ -2,7 +2,7 @@
     <div class="flex items-center justify-between max-w-screen-xl mx-auto">
         <!-- Logo -->
         <div class="flex items-center space-x-2">
-            <img src="https://www.muaban.net/assets/img/logo.svg" alt="Muaban Logo" class="w-20">
+            <img src="https://www.muaban.net/assets/img/logo.svg" alt="" class="w-20">
         </div>
 
         <!-- Search Bar -->
