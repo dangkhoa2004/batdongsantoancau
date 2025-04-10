@@ -1,15 +1,69 @@
-<a href="{{ route('homepage.detail', ['id' => $id]) }}">
-    <div class="rounded-lg p-2 overflow-hidden hover:shadow-2xl transition-shadow duration-300" style="z-index: 1;">
-        <div class="relative">
-            <div class="absolute top-0 left-0 flex gap-2 p-2">
-                <img class="" src="{{ asset('storage/images/hot.gif' ) }}"style="width: 30px; height: 15px;">
-                <img class="" src="{{ asset('storage/images/new1.gif' ) }}" style="width: 30px; height: 15px;">
+@props([
+    'id',
+    'image_url',
+    'price',
+    'location',
+    'info',
+    'area_mb',
+    'area_sd',
+])
+
+@php
+    $image = is_array($image_url) ? $image_url[0] : $image_url;
+@endphp
+
+<a href="{{ route('homepage.detail', ['id' => $id]) }}" class="block group">
+    <div class="rounded-xl overflow-hidden bg-white shadow-sm group-hover:shadow-xl transition-all duration-300 flex flex-col">
+
+        {{-- Phần ảnh chính --}}
+        <div class="relative h-40 sm:h-48 md:h-52 lg:h-56 bg-gray-100">
+            <div class="absolute top-2 left-2 flex gap-2 p-2 z-10">
+                <img src="{{ asset('storage/images/hot.gif') }}" alt="Hot" class="w-[30px] h-[15px]">
+                <img src="{{ asset('storage/images/new1.gif') }}" alt="New" class="w-[30px] h-[15px]">
             </div>
-            <img src="{{ is_array($imageUrl) ? asset('storage/' . $imageUrl[0]) : asset('storage/' . $imageUrl) }}" alt=" " class="w-full h-48 object-cover rounded-lg" loading="lazy">
-            <div class="absolute bottom-0 left-0 w-full bg-red-400 bg-opacity-80 text-white p-2 rounded-b-lg">
-                <p class="font-bold  text-xs">{{ number_format($price, 0, ',', '.') }} VNĐ</p>
+
+            <img src="{{ asset('storage/' . $image) }}"
+                 alt="Ảnh bất động sản"
+                 class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="absolute bottom-0 left-0 w-full bg-red-600 bg-opacity-90 text-white px-3 py-1 text-xs font-bold">
+                CHỈ TỪ {{ number_format($price, 0, ',', '.') }} VNĐ - SỞ HỮU NGAY
             </div>
         </div>
-        <p class="text-sm mt-3 text-gray-700"><i class="fas fa-map-marker-alt ml-1"></i> {{ $location }}</p>
+
+        {{-- Nội dung --}}
+        <div class="p-4 flex flex-col flex-grow">
+            {{-- Tiêu đề --}}
+            <h3 class="text-base font-semibold text-gray-800 leading-snug mb-2 line-clamp-2">
+                {{ $attributes->get('title') ?? 'Tin đăng bất động sản nổi bật tại Hải Phòng' }}
+            </h3>
+
+            {{-- Thông tin chi tiết --}}
+            <div class="flex flex-wrap items-center text-sm text-gray-600 gap-2 mb-2">
+                <span class="text-red-600 font-bold text-base">{{ number_format($price, 0, ',', '.') }} VNĐ</span>
+                @if($area_mb)<span>• {{ $area_mb }} m²</span>@endif
+                @if($area_sd)<span>• {{ $area_sd }} m²</span>@endif
+                <span>• {{ $location }}</span>
+            </div>
+
+            {{-- Mô tả --}}
+            <p class="text-sm text-gray-500 mb-4 line-clamp-2">
+                {{ $info }}
+            </p>
+
+            {{-- Người đăng & gọi điện --}}
+            <div class="flex items-center justify-between mt-auto">
+                <div class="flex items-center gap-2 text-sm text-gray-700">
+                    <img src="" class="w-8 h-8 rounded-full" alt="avatar">
+                    <div>
+                        <p class="font-semibold">Quỳnh</p>
+                        <p class="text-gray-400 text-[11px]">Đăng hôm nay</p>
+                    </div>
+                </div>
+                <button class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded text-xs font-medium">
+                    📞 0398 898 *** • Hiện số
+                </button>
+            </div>
+        </div>
     </div>
 </a>
