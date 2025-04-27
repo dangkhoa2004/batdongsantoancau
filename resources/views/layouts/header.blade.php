@@ -1,7 +1,7 @@
 <header class="bg-white shadow-md p-4">
     <div class="flex items-center justify-between max-w-screen-xl mx-auto">
         <div class="flex items-center space-x-2">
-            <img src="https://www.muaban.net/assets/img/logo.svg" alt="" class="w-20">
+            <img src="{{ asset('storage/images/logo.png') }}" alt="" class="w-20">
         </div>
         <div class="flex-1 mx-4 relative">
             <input type="text" placeholder="Xin chào, hôm nay bạn cần tìm gì?"
@@ -18,7 +18,7 @@
                 class="text-sm text-orange-600 bg-white px-4 py-2 rounded-lg border border-orange-500 hover:bg-orange-50"><a href="{{route('posts.index')}}">Đăng tin</a></button>
             <button class="text-sm text-gray-600 hover:text-orange-600">Đăng nhập</button>
             <button class="text-sm text-gray-600 hover:text-orange-600">Cá nhân</button>
-            
+
         </div>
     </div>
 </header>

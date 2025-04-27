@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="flex flex-col space-y-4">
                 <div class="flex items-center space-x-2">
-                    <img src="" alt="" class="w-20">
+                    <img src="{{ asset('storage/images/logo.png') }}" alt="" class="w-20">
                     <span class="text-xl font-bold text-orange-600">BDS-TOANCAU.COM</span>
                 </div>
                 <p class="text-sm text-gray-600">ĐT: ...................</p>
