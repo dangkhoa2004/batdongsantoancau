@@ -6,10 +6,8 @@
                     <img src="{{ asset('storage/images/logo.png') }}" alt="" class="w-20">
                     <span class="text-xl font-bold text-orange-600">BDS-TOANCAU.COM</span>
                 </div>
-                <p class="text-sm text-gray-600">ĐT: ...................</p>
-                <p class="text-sm text-gray-600">Văn phòng giao dịch: ...................</p>
-                <p class="text-sm text-gray-600">...................</p>
-                <p class="text-sm text-gray-600">Email: <a href="mailto:..................." class="text-orange-600">...................</a></p>
+                <p class="text-sm text-gray-600">ĐT: 0945325155</p>
+                <p class="text-sm text-gray-600">Email: <a href="mailto:phungucquynh251187@gmail.com" class="text-orange-600">phungucquynh251187@gmail.com</a></p>
             </div>
             <div class="flex flex-col space-y-4 col-span-3">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
