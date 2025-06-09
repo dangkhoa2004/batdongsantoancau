@@ -54,7 +54,7 @@
             {{-- Người đăng & gọi điện --}}
             <div class="flex items-center justify-between mt-auto">
                 <div class="flex items-center gap-2 text-sm text-gray-700">
-                    <img src="" class="w-8 h-8 rounded-full" alt="avatar">
+                    <img src="/storage/images/avt.png" class="w-8 h-8 rounded-full" alt="avatar">
                     <div>
                         <p class="font-semibold">Quỳnh</p>
                         <p class="text-gray-400 text-[11px]">Đăng hôm nay</p>
