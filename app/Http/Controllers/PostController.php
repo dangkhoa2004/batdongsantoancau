@@ -37,10 +37,6 @@ class PostController extends Controller
     {
         return view('posts.create');
     }
-    public function createv2()
-    {
-        return view('posts.createv2');
-    }
     public function store(Request $request)
     {
         $data = $request->validate([

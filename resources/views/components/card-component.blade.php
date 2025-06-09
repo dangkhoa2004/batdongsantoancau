@@ -1,15 +1,15 @@
 @props([
-    'id',
-    'image_url',
-    'price',
-    'location',
-    'info',
-    'area_mb',
-    'area_sd',
+'id',
+'image_url',
+'price',
+'location',
+'info',
+'area_mb',
+'area_sd',
 ])
 
 @php
-    $image = is_array($image_url) ? $image_url[0] : $image_url;
+$image = is_array($image_url) ? $image_url[0] : $image_url;
 @endphp
 
 <a href="{{ route('homepage.detail', ['id' => $id]) }}" class="block group">
@@ -23,8 +23,8 @@
             </div>
 
             <img src="{{ asset('storage/' . $image) }}"
-                 alt="Ảnh bất động sản"
-                 class="absolute inset-0 w-full h-full object-cover">
+                alt="Ảnh bất động sản"
+                class="absolute inset-0 w-full h-full object-cover">
 
             <div class="absolute bottom-0 left-0 w-full bg-red-600 bg-opacity-90 text-white px-3 py-1 text-xs font-bold">
                 CHỈ TỪ {{ number_format($price, 0, ',', '.') }} VNĐ - SỞ HỮU NGAY
@@ -41,7 +41,6 @@
             {{-- Thông tin chi tiết --}}
             <div class="flex flex-wrap items-center text-sm text-gray-600 gap-2 mb-2">
                 <span class="text-red-600 font-bold text-base">{{ number_format($price, 0, ',', '.') }} VNĐ</span>
-                @if($area_mb)<span>• {{ $area_mb }} m²</span>@endif
                 @if($area_sd)<span>• {{ $area_sd }} m²</span>@endif
                 <span>• {{ $location }}</span>
             </div>
@@ -60,9 +59,6 @@
                         <p class="text-gray-400 text-[11px]">Đăng hôm nay</p>
                     </div>
                 </div>
-                <button class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded text-xs font-medium">
-                    📞 0398 898 *** • Hiện số
-                </button>
             </div>
         </div>
     </div>

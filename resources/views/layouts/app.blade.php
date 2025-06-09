@@ -26,6 +26,25 @@
             -ms-user-select: none;
             scroll-behavior: smooth;
         }
+        ::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 8px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #888;
+        }
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #ccc #f1f1f1;
+        }
     </style>
 </head>
 
@@ -34,7 +53,6 @@
     @include('layouts.header')
     @yield('content')
     @include('layouts.footer')
-
 </body>
 
 </html>

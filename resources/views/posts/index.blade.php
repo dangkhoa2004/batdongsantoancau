@@ -9,7 +9,7 @@
         :icon="'fas fa-plus'"
         :href="route('posts.create')" />
     @php
-    $headers = ['Mã bài đăng', 'Ảnh', 'Tiêu đề', 'Diện tích MB', 'Diện tích SD', 'Số tầng', 'Phòng ngủ', 'Phòng toilet', 'Giá', 'Địa chỉ', 'Hướng', 'Hướng phong thủy','Thời gian đăng', 'Thao tác'];
+    $headers = ['Ảnh', 'Tiêu đề', 'Diện tích MB', 'Diện tích SD', 'Số tầng', 'Phòng ngủ', 'Phòng toilet', 'Giá', 'Địa chỉ', 'Hướng', 'Hướng phong thủy','Thời gian đăng', 'Thao tác'];
     $rows = $posts->map(function($post) {
     $images = is_string($post->images) ? json_decode($post->images, true) : $post->images;
     $imageHtml = '';
@@ -19,14 +19,11 @@
     $formattedPrice = number_format($post->price, 0, ',', '.') . ' VND';
     $formattedAreaMb = number_format($post->area_mb, 0, ',', '.') . ' m²';
     $formattedAreaSd = number_format($post->area_sd, 0, ',', '.') . ' m²';
-    $formattedWidth = number_format($post->width, 0, ',', '.') . ' m';
-    $formattedLength = number_format($post->length, 0, ',', '.') . ' m';
     $formattedFloors = number_format($post->floors, 0, ',', '.') . ' tầng';
     $formattedBedrooms = number_format($post->bedrooms, 0, ',', '.') . ' phòng';
     $formattedBathrooms = number_format($post->bathrooms, 0, ',', '.') . ' phòng';
     $formattedPostedAt = \Carbon\Carbon::parse($post->posted_at)->format('d/m/Y');
     return [
-    $post->code,
     $imageHtml,
     $post->title,
     $formattedAreaMb,
