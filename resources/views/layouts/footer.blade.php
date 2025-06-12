@@ -9,7 +9,7 @@
                     <span class="text-xl font-bold text-orange-600">BDS-TOANCAU.COM</span>
                 </a>
                 <div class="text-gray-600 space-y-1">
-                    <p><strong>📞</strong> 0945 325 155</p>
+                    <p><strong>📞</strong> 0945.325.155</p>
                     <p><strong>✉️</strong> <a href="mailto:phungucquynh251187@gmail.com" class="text-orange-600 hover:underline">phungucquynh251187@gmail.com</a></p>
                 </div>
             </div>

@@ -84,7 +84,8 @@
                     :location="$post->location"
                     :info="$post->info"
                     :area_mb="$post->area_mb"
-                    :area_sd="$post->area_sd" />
+                    :area_sd="$post->area_sd"
+                    :posted_at="$post->posted_at" />
                 @endforeach
             </div>
         </div>

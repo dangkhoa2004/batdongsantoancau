@@ -6,6 +6,7 @@
 'info',
 'area_mb',
 'area_sd',
+'posted_at'
 ])
 
 @php
@@ -55,8 +56,8 @@ $image = is_array($image_url) ? $image_url[0] : $image_url;
                 <div class="flex items-center gap-2 text-sm text-gray-700">
                     <img src="/storage/images/avt.png" class="w-8 h-8 rounded-full" alt="avatar">
                     <div>
-                        <p class="font-semibold">Quỳnh</p>
-                        <p class="text-gray-400 text-[11px]">Đăng hôm nay</p>
+                        <p class="font-semibold">Anh Quỳnh</p>
+                        <p class="text-gray-400 text-[11px]">{{ $posted_at }}</p>
                     </div>
                 </div>
             </div>
