@@ -3,7 +3,7 @@
 @section('content')
 <div class="max-w-screen-xl mx-auto px-4 py-6">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 mt-4">
-        <div class="lg:col-span-8 md:col-span-12 bg-white flex flex-col h-auto lg:h-full">
+        <div class="lg:col-span-10 md:col-span-14 flex flex-col h-auto lg:h-full">
             <x-image-slider :images="$post->images" />
             <x-listing-title-detail :title="$post->title" />
             <x-listing-price :price="$post->price" />
@@ -29,6 +29,12 @@
             <x-google-map :src="'https://www.google.com/maps/embed?pb='.$post->link" />
         </div>
         <div class="lg:col-span-2 md:col-span-6 bg-gray-100 flex flex-col">
+            <div class="lg:col-span-2">
+                <x-list-component title="CẦN BÁN GẤP" :items="[
+            'Bán lô góc đẹp nhất Phú Quốc',
+            'Bán lô siêu góc, 3 mặt tiền, quận Ngô Quyền',
+            ]" />
+            </div>
         </div>
     </div>
 </div>
